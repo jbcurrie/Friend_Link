@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FriendFinder</title>
+        <!-- Latest compiled and minified CSS & JS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Font Awesome Glyphicons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <!--W3 CSS-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Chosen -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.7.0/chosen.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.7.0/chosen.jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="w3-container">
+            <h2>Survey Questions</h2>
+            <form action="/api/" class="w3-container" id="surveyForm">
+                <div class="w3-card-4 w3-padding" id="aboutMe"> 
+                    <h3><strong>About You</strong></h3>
+                    <h4>Name (Required)</h4>
+                    <input type="text" name="name" id="name" class="form-control" required="">
+                    <h4>Link to Photo Image (Required)</h4>
+                    <input type="file" name="photo" class="photo">  
+                    <!-- offer to upload link instead -->
+                    <p>I would like to share a URL:</p><input type="radio" id="myRadio">
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 1</strong></h3>
+                    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 2</strong></h3>
+                    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>               
+                </div>  
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 3</strong></h3>
+                    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>                 
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 4</strong></h3>
+                    <h4>You rarely do something just out of sheer curiosity.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>                 
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 5</strong></h3>
+                    <h4>People can rarely upset you.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>               
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 6</strong></h3>
+                    <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>               
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 7</strong></h3>
+                    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>             
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 8</strong></h3>
+                    <h4>You rarely get carried away by fantasies and ideas.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>                
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 9</strong></h3>
+                    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>           
+                </div>
+                <div class="w3-card-4 w3-padding-large">
+                    <h3><strong>Question 10</strong></h3>
+                    <h4>You feel more energetic after spending time with a group of people.</h4>
+                    <div class="w3-row">
+                        <div class="w3-third">
+                            <input type="button" class="w3-button">
+                                <select data-placeholder="" class="w3-select w3-border" id="questions">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </input>  
+                        </div>
+                    </div>               
+                </div>
+                <!-- Submit Button -->
+                <div>
+                    <input type="submit" class="w3-green w3-section w3-block w3-round w3-xlarge" id="submit" value="submit">
+                </div>
+            </form>
+            <hr>
+            <footer class="footer">
+                <div class="container">
+                    <p><a href="/api/">API Friends List</a> | <a href="https://github.com/jbcurrie">GitHub Repo</a></p>
+                </div>
+            </footer>
+        </div>
+        <!-- Modal -->
+        <div id="id01" class="w3-modal" >
+            <div class="w3-modal-content w3-card-4" style="width:30%">
+                <div class="w3-display-container w3-hover-opacity" style="width:100%" id="modalData">
+                    <!-- <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span> -->
+                    <!-- <p></p> -->
+                </div>
+            </div>
+        </div>
+        <!-- <script type="text/javascript" src="../routing/apiRoutes.js"></script> -->
+        <script>
+        function displayUrl() {
+            var radio = document.getElementById("myRadio");
+            radio.onclick = function(event) {
+                if (document.getElementById("url") === null) {
+                    var x = document.createElement("input");
+                    x.setAttribute("type", "text");
+                    x.setAttribute("placeholder","Enter Photo URL");
+                    x.setAttribute("name", "url")
+                    x.id = "url";
+                    var section = document.getElementById("aboutMe")
+                    section.appendChild(x);
+                }
+            }
+        }
+        //create a new route /upload. include multi-part form data, new action sends to new route, post and package form data to an object 
+        function postData() {
+            var submitForm = document.getElementById("submit");
+            submitForm.onclick = function(event) { 
+                var dataArr = document.getElementById("surveyForm").elements
+
+                var survey = {
+                    name: dataArr.name.value.toLowerCase(),
+                    photo: "",
+                    scores: [],
+                    getScores: function() {
+                        for (item in dataArr.questions) {
+                            survey.scores.push(dataArr.questions[item].value)
+                        }
+                        // return survey.scores
+                    },
+                    getPhoto: function () {
+                        if (dataArr.photo.value === "" && dataArr.url.value !== "") {
+                            survey.photo = dataArr.url.value;
+                        } else if (dataArr.photo.value !== "") {
+                            survey.photo = dataArr.photo.value
+                        } else {
+                            survey.photo = "http://www.sbsc.in/images/dummy-profile-pic.png"
+                        }
+                        //could provide a default photo if neither provided. 
+                    }
+                }
+                survey.getScores();
+                survey.getPhoto();
+                // console.log(survey);
+                
+                $.post("/api/new", survey, function(data) {
+                    // console.log(data.name);
+                    getResults(data.name,data.scores);
+                    console.log("thank you for filling out the survey");
+                })
+                document.getElementById("surveyForm").reset();
+            }
+        }
+        function getResults(name,score) {
+            console.log("getResults...");
+
+            var currentURL = window.location.origin
+            
+            // console.log(currentURL);
+            // var name = document.getElementById("name").value.trim();
+            // console.log(name);
+
+            // var routeName = name.replace(/\s+/g, "").toLowerCase();
+
+            // console.log(routeName);
+            //url + routeName
+            $.ajax({url: currentURL + "/api/",method:"GET"}).done(function(data) { 
+                // console.log(url);
+                // console.log(data);
+                console.log(`current name: ${name}`);
+                console.log(`current score: ${score}`);
+
+                //* Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).
+                // * With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the `totalDifference`.
+                //     * Example: 
+                //     * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
+                //     * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
+                //     * Total Difference: **2 + 1 + 2 =** **_5_**
+                // * Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both `5-3` and `3-5` as `2`, and so on. 
+                // * The closest match will be the user with the least amount of difference.
+                var totDiffArr = [];
+                for (item in data) {
+                    
+                    var check = data[item].name 
+                    if (check !== name) {
+                        var temp = [];                        
+                        for (var i = 0; i < data[item].scores.length; i++) {
+                            temp.push(Math.abs(data[item].scores[i] - score[i]))
+                        }
+                        if (temp.length = 10) {
+                            //get the sum of the scores and push them to the total difference array
+                            totalDifference = temp.reduce(function(sum,value) {
+                                return sum + value;
+                            },0)
+                            // console.log(temp);
+                            // console.log(totalDifference);
+                            //create an object for the temp with name and total difference
+                            var obj = {
+                                tempName: data[item].name,
+                                tempTotDiff: totalDifference
+                            }
+                            //push the object to a tempObj arr
+                            totDiffArr.push(obj)  
+                        }
+                    }
+                }
+                //once the loop finishes, run a comparison to see which name has the lowest score
+                console.log(totDiffArr);
+                //sort the array of objects according to total diff in ascending order
+                totDiffArr.sort(function(a,b) {
+                    return a.tempTotDiff - b.tempTotDiff;
+                })
+                //pass the name to an ajax call and display data in a modal for best match
+                //if the score for index 0 equals the score for any other friends, return the names of both in a new array
+                var allMatches = []
+                for (choice in totDiffArr) {
+                    if (totDiffArr[choice].tempName !== totDiffArr[0].tempName) {
+                        if (totDiffArr[choice].tempTotDiff === totDiffArr[0].tempTotDiff) {
+                            allMatches.push(totDiffArr[choice].tempName)
+                        }
+                    }
+                }
+                getMatch(totDiffArr[0].tempName,allMatches);
+            })
+        }
+
+        function getMatch (name,arr) {
+
+            var routeName = name.replace(/\s+/g, "").toLowerCase();
+            var currentURL = window.location.origin
+
+            if (arr.length > 0) {
+                for (i in arr) {
+                    arr[i].replace(/\s+/g, "").toLowerCase();
+                }
+            }
+            console.log(`other matches exist: ${arr}`);
+            //url + routeName
+            $.ajax({url: currentURL + "/api/" + routeName ,method:"GET"}).done(function(data) { 
+                var match = JSON.stringify(data)
+                console.log(`your best match is: ${match}`);
+                displayModal(match)
+            })
+        }
+        
+        function displayModal(match) {
+            var temp = JSON.parse(match);
+            // debugger;
+                console.log("displaying modal")
+                document.getElementById("id01").style.display='block'
+                var modal = document.getElementById("modalData")
+                modal.innerHTML =  
+                    "<img src=" + "'" + temp.photo + "'" + "alt='' style='width:100%'>" + 
+                        "<div class='w3-display-middle w3-display-hover w3-xlarge'>" + 
+                             "<button class='w3-button w3-black'>" + temp.name + "</button>" + 
+                         "</div>";
+        }
+        // displayModal();
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        displayUrl();
+        postData();
+
+        </script>
+    </body>
+</html>

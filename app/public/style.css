@@ -1,0 +1,11 @@
+input:invalid { 
+    border: 2px solid red;
+}
+
+.modal {
+    width: 30%;
+}
+
+#modalData {
+    width: 100%;
+}

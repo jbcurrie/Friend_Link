@@ -1,0 +1,25 @@
+{
+  "name": "friend_finder",
+  "version": "1.0.0",
+  "description": "app",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chosen-js": "^1.7.0",
+    "chosen-npm": "^1.4.2",
+    "connect-timeout": "^1.9.0",
+    "express": "^4.15.4",
+    "express-fileupload": "^0.1.4",
+    "fs": "0.0.1-security",
+    "jsdom": "^11.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Jonathan",
+  "license": "ISC"
+}
