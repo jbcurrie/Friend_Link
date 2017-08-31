@@ -86,12 +86,7 @@ module.exports = function(app) {
             // The name of the input field 'photo' is used to retrieve the uploaded file 
             let photo = req.files.photo;
             //  Use the mv() method to place the file somewhere on the server 
-                //original route; works on pc
-                    // 'path.join(__dirname,'../public/images/' + photo.name
-                // for heroku
-                // path.join( __dirname,'/../../public/images/',photo.name
 
-            console.log(__dirname);
             photo.mv(path.join( __dirname,'../public/images/',photo.name),function(err) {
                 if (err) {
                 return res.status(500).send(err);
@@ -123,10 +118,7 @@ module.exports = function(app) {
             return res.set("Connection", "close");
          
         } else {
-            //original pathway, works on pc
-                //path.join(__dirname, "../public/images"
-            //heroku pathway
-                //path.join( __dirname,'/../../public/images/',req.params.photo)
+        
             res.sendFile(path.join( __dirname,'../public/images/',req.params.photo));
             return res.set("Connection", "close");
         }  

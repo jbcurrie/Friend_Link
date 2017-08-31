@@ -84,12 +84,7 @@
             for (var i = 0; i < document.getElementById("surveyForm").elements.questions.length; i++) {
                 score.push(document.getElementById("surveyForm").elements.questions[i].value)
             } 
-            //check for blank answers (post wont add friend)
-            // if (document.getElementById("name").checkValidity() == false || score.includes("")) {
-            //     bool = true;
-            // }
             
-            // getResults(name,score,bool);
             if (document.getElementById("name").checkValidity() == false || score.includes("")) {
                 bool = true;
                 getResults(name,score,bool);
@@ -218,7 +213,6 @@
         clear.onclick = function() {
             clearTable();
             // Refresh the page after data is cleared
-            debugger;
             location.reload();
         };
     }
