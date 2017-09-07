@@ -4,4 +4,4 @@ A friend compatibility app deployed on Heroku. Each user takes a compatibility t
 
 ## [Open App](https://lit-wave-71867.herokuapp.com/)
 
-* **Technologies Used:** Node.js, HTML, RESTful Web API with JSON responses
+**Technologies Used:** Node.js, HTML, RESTful Web API with JSON responses
